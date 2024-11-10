@@ -22,11 +22,15 @@ export const Navegador = () =>{
                 </button>
                 <nav className={ `navegador-nav ${ menu ? ' isActive' : ''}`}>
                     <ul className="navegador-ul">
-                        <li className="navegador-li"><a href="" className="navegador-a">item #</a></li>
-                        <li className="navegador-li"><a href="" className="navegador-a">item #</a></li>
-                        <li className="navegador-li"><a href="" className="navegador-a">item #</a></li>
-                        <li className="navegador-li"><a href="" className="navegador-a">item #</a></li>
-                        <li className="navegador-li"><a href="" className="navegador-a">item #</a></li>
+                        <li className="navegador-li"><a href="" className="navegador-a">Inicio</a></li>
+                        <li className="navegador-li"><a href="" className="navegador-a">Horario</a></li>
+                        <li className="navegador-li"><a href="" className="navegador-a">Docente</a></li>
+                        <li className="navegador-li"><a href="" className="navegador-a">Asistencia</a></li>
+                        <li className="navegador-li"><a href="" className="navegador-a">Ajustes</a></li>
+                        <li className="navegador-li"><a href="" className="navegador-a">Registro</a></li>
+                        <li className="navegador-li"><a href="" className="navegador-a">Cerrar secion</a></li>
+
+
                     </ul>
                 </nav>
             </header>
