@@ -2,13 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { Navegador } from './componentes/navegador'
-import Inicio from './registro/inicio'
+import InicioSesion from './registro/inicio'
+import Registro from './registro/registro'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <Navegador/>
-        <Inicio/>  
+        <InicioSesion/>  
+        <Registro/>
 
 
     </React.StrictMode>
