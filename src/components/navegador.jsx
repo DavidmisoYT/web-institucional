@@ -1,7 +1,6 @@
 import './navegador.css'
 import logo from '../img/logo.png'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'; 
 
 
 
@@ -24,15 +23,13 @@ export const Navegador = () =>{
                 </button>
                 <nav className={ `navegador-nav ${ menu ? ' isActive' : ''}`}>
                     <ul className="navegador-ul">
-                    <li className="navegador-li"><Link to="/home" className="navegador-a">Inicio</Link></li>
+                    <li className="navegador-li"><a href='' className="navegador-a">Inicio</a></li>
                         <li className="navegador-li"><a href="" className="navegador-a">Horario</a></li>
                         <li className="navegador-li"><a href="" className="navegador-a">Docente</a></li>
                         <li className="navegador-li"><a href="" className="navegador-a">Asistencia</a></li>
                         <li className="navegador-li"><a href="" className="navegador-a">Ajustes</a></li>
                         <li className="navegador-li"><a href="" className="navegador-a">Registro</a></li>
                         <li className="navegador-li"><a href="" className="navegador-a">Cerrar secion</a></li>
-
-
                     </ul>
                 </nav>
             </header>

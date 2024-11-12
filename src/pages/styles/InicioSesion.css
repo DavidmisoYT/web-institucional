@@ -1,23 +1,32 @@
-/* archivo CSS del formulario (por ejemplo, InicioSesion.css) */
+.Fondo{
+  width: 100%;
+}
 
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh; 
+}
 .inicio-sesion {
-      /* Esto aplica la imagen de fondo*/
-    background-image: url('../img/FondoFormulario.png');
-    background-size: cover;
+    position: relative;
+    background-image: url('../../img/Fondo.jpeg');
+    background-size: 100%;
+    background-color: rgb(116, 38, 38);
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* ocupa toda la pantalla */
+    height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: rgb(0, 0, 0);
     align-items: center;
     font-family: sans-serif;
-    background: rgb(108, 17, 44);
    
 }
 
-  /*Estilos adicionales para el formulario*/
+ 
 .form-container {
     background-color: rgba(240, 240, 240, 0.8); /* fondo semitransparente */
     padding: 20px;
@@ -78,4 +87,14 @@ button {
 
 button:hover {
   background-color: darkred;
+}
+
+@media screen and (max-width:480px){
+.inicio-sesion {
+  background-color: darkred;
+  background-image: url('../../img/Fondo2.jpg');
+
+
+}
+
 }
