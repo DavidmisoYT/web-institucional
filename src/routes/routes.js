@@ -1,39 +1,39 @@
-import { createBrowserRouter } from "react-router-dom";
+/*import { createBrowserRouter } from "react-router-dom";
+import { InicioSesion } from "../pages/InicioSesion";
 import { Inicio } from "../pages/Inicio";
+import { Registro } from "../pages/Registro";
 import { Horario } from "../pages/Horario";
 import { Docentes } from "../pages/Docente";
 import { Asistencia } from "../pages/Asistencia";
 import { Ajustes } from "../pages/Ajustes";
-import InicioSesion from "../pages/InicioSesion";
-import { Registro } from "../pages/Registro";
-
-export const Routes = createBrowserRouter([
+export const router = createBrowserRouter([
     {
         path: '/',
-        element: <InicioSesion/>  
+        Component: InicioSesion
     },
     {
         path: '/Registro',
-        element: <Registro/>  
+        Component: Registro
     },
     {
         path: '/Inicio',
-        element: <Inicio/>  
+        Component: Inicio
     },
     {
         path: '/Horario',
-        element: <Horario/>  
+        Component: Horario
     },
     {
         path: '/Docente',
-        element: <Docentes/>  
+        Component: Docentes
     },
     {
         path: '/Asistencia',
-        element: <Asistencia/>  
+        Component: Asistencia
     },
     {
         path: '/Ajustes',
-        element: <Ajustes/>  
+        Component: Ajustes
     }
-]);
+
+])*/

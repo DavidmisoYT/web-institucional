@@ -1,11 +1,10 @@
-// InicioSesion.jsx
 import React from 'react';
-import './styles/InicioSesion.css';
+import './Styles/InicioSesion.css';
 import { useNavigate } from 'react-router-dom';
 
 
 export const InicioSesion = () => {
-  const navi = useNavigate()
+  const navigate = useNavigate()
   const submit = async (event) =>{
     event.preventDefault();
     const correo = event.target.elements.email.value
@@ -16,13 +15,13 @@ export const InicioSesion = () => {
     
     const user = users.find(user => user.email === correo && user.password === past )
      if (user){
-      navi('/Inicio')
+      navigate('/Inicio')
      }
     
   }
     return (
       <>
-
+        
         <div className="inicio-sesion">
             <div className="form-container">
             <form className="login-form" onSubmit={submit}>

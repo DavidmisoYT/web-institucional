@@ -89,12 +89,11 @@ button:hover {
   background-color: darkred;
 }
 
+
 @media screen and (max-width:480px){
-.inicio-sesion {
-  background-color: darkred;
-  background-image: url('../../img/Fondo2.jpg');
-
-
-}
+  .inicio-sesion {
+    background-color: darkred;
+    background-image: url('../../img/Fondo2.jpg');
+  }
 
 }

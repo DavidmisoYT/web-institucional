@@ -1,0 +1,75 @@
+.Novedades{
+    width: 250px;
+    height: 500px;
+    border: 2px solid black;
+}
+.Logo{
+    width: 610px;
+    height: 120px;
+    margin-top: 125px;
+    margin-left: 20px;
+    border: 2px solid black;
+}
+.Fondo-i{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 30%;
+    right: 40%;
+    height: 500px;
+    width: 500px;
+    opacity: 0.2;
+
+}
+.Informacion-g{
+    margin-left: 10px;
+}
+.Contenedor-i{
+    margin-top: 15px;
+    display: flex;
+    margin-left: 10px;
+    flex-direction: row; /* Alinea los elementos lateralmente (de izquierda a derecha) */
+    gap: 10px; /* Espacio entre los elementos, opcional */
+    float: left;
+    padding: 10px;
+   
+}
+
+.Perfil{
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+}
+
+@media screen and (max-width:480px){
+    .Logo{
+        width: 305px;
+        height: 60px;   
+    }
+    .Novedades{
+        width: 305px;
+        height: 60px;   
+    }
+    .Contenedor-i{
+        flex-direction: column;
+    }
+    .Perfil{
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+  
+    }
+    .Informacion-g{
+        margin-left: 1px;
+    }
+    .Fondo-i{
+        width: 250px;
+        height: 250px;
+        position: fixed;
+        top: 40%;
+        right: 15%;
+    }
+
+
+}

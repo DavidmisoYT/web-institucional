@@ -1,12 +1,12 @@
 :root {
-    --negro: #393939;
+    --negro: #5f5d5d;
     --tipo-principal: Helvetica, Arial, sans-serif;
     --tipo-secundaria: Verdana;
   }
   
   @media (prefers-color-scheme: dark) {
     :root {
-      --negro: #ececec;
+      --negro: #000000;
     }
   }
  

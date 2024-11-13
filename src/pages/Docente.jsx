@@ -1,4 +1,4 @@
-import React from "react"
+import './Styles/general.css'
 
 export const Docentes = () =>{
     return (

@@ -1,11 +1,16 @@
+.Contenedor{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+    width: 100%;
+    
+}
 .navegador{
     width: 100%;
     background-color: brown;
     padding: 1em;
     display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
     border: 1px solid black;
     justify-content: space-between;
     align-items: center;
@@ -77,10 +82,15 @@
 
 .navegador-a:hover {
     color: black; 
+    
 
 }
 
+
 @media screen and (max-width:480px){
+    .Contenedor{
+        width: 100%;
+    }
     .navegador-button{
         display: flex;
         position: absolute;
@@ -97,14 +107,17 @@
         opacity: 0;
         overflow: hidden;
         transition: all .5s ease;
+        
     }
     .navegador-nav.isActive{
         height: 60vh;
         opacity: 1;
+        
     }
     .navegador-ul{
         flex-direction: column;
         padding-left: 0;
+        
     }
     .navegador-li{
         margin: 0.5em 0;

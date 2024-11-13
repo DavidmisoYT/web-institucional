@@ -1,18 +1,22 @@
 // InicioSesion.jsx
 import React from 'react';
-import './styles/InicioSesion.css';
-
+import './Styles/InicioSesion.css';
+import { useNavigate } from 'react-router-dom';
 export const Registro = () => {
-    const submit = (event) =>{
-        event.preventDefault();
-        console.log(event.target.elements.name.value)
-        console.log(event.target.elements.password.value)
-        console.log(event.target.elements.email.value)
-        console.log(event.target.elements.grado.value)
-
-
-    }
-
+    const navigate = useNavigate()
+    const submit = async (event) =>{
+      event.preventDefault();
+      const correo = event.target.elements.email.value
+      const past = event.target.elements.password.value
+  
+      const response = await fetch('https://6622071827fcd16fa6c8818c.mockapi.io/api/v1/users')
+      const users = await response.json()
+      
+      const user = users.find(user => user.email === correo && user.password === past )
+       if (user){
+        navigate('/Inicio')
+       }
+    }  
     return (
       <>
         
