@@ -9,6 +9,12 @@ body{
     border-radius: 5px;
 
 }
+.info-button{
+    display: flex;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
 .contenedor{
     background-color: maroon;
 }
