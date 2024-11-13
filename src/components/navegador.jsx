@@ -26,7 +26,7 @@ export const Navegador = () =>{
                     <nav className={ `navegador-nav ${ menu ? ' isActive' : ''}`}>
                         <ul className="navegador-ul">
                             <li className="navegador-li"><Link to='/Inicio' className="navegador-a">Inicio</Link></li>
-                            <li className="navegador-li"><Link to="/Horario" className="navegador-a">Horario</Link></li>
+                             <li className="navegador-li"><Link to="/Horario" className="navegador-a">Horario</Link></li>
                             <li className="navegador-li"><Link to="/Docentes" className="navegador-a">Docente</Link></li>
                             <li className="navegador-li"><Link to="/Asistencia" className="navegador-a">Asistencia</Link></li>
                             <li className="navegador-li"><Link to="/Ajustes" className="navegador-a">Ajustes</Link></li>

@@ -1,7 +1,16 @@
+body{
+    background-color: rgb(229, 219, 219);   
+}
+
 .Novedades{
     width: 250px;
     height: 500px;
     border: 2px solid black;
+    border-radius: 5px;
+
+}
+.contenedor{
+    background-color: maroon;
 }
 .Logo{
     width: 610px;
@@ -9,6 +18,7 @@
     margin-top: 125px;
     margin-left: 20px;
     border: 2px solid black;
+    border-radius: 5px;
 }
 .Fondo-i{
     background-position: center;
@@ -20,6 +30,7 @@
     height: 500px;
     width: 500px;
     opacity: 0.2;
+    
 
 }
 .Informacion-g{
@@ -33,31 +44,39 @@
     gap: 10px; /* Espacio entre los elementos, opcional */
     float: left;
     padding: 10px;
-   
 }
 
 .Perfil{
     width: 150px;
     height: 150px;
     border: 2px solid black;
+    border-radius: 5px;
+
 }
 
 @media screen and (max-width:480px){
     .Logo{
         width: 305px;
         height: 60px;   
+        border-radius: 5px;
+
     }
     .Novedades{
         width: 305px;
         height: 60px;   
+        border-radius: 5px;
+
     }
     .Contenedor-i{
         flex-direction: column;
+
     }
     .Perfil{
         width: 100px;
         height: 100px;
         border: 2px solid black;
+        border-radius: 5px;
+
   
     }
     .Informacion-g{
