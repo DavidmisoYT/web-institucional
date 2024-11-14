@@ -36,6 +36,10 @@ export const Registro = () => {
                         <input type="number" id="number" name="grado" placeholder='6 - 11' min="6" max="11" required />
                     </div>
                     <div className="form-group">
+                        <label htmlFor="number">Grupo:</label>
+                        <input type="number" id="number" name="grado" placeholder='1 - 8' min="6" max="11" required />
+                    </div>
+                    <div className="form-group">
                         <label htmlFor="email">Correo Electrónico:</label>
                         <input type="email" id="email" name="email" placeholder='Email@gmail.com' required />
                     </div>

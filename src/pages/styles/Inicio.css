@@ -2,30 +2,7 @@ body{
     background-color: rgb(229, 219, 219);   
 }
 
-.Novedades{
-    width: 250px;
-    height: 500px;
-    border: 2px solid black;
-    border-radius: 5px;
-
-}
-.info-button{
-   
-   background-color: transparent;
-   height: 320px;
-   width: 320px;
-
-}
-
-
-.info-button{
-    display: flex;
-    cursor: pointer;
-    height: 32px;
-    width: 32px;
-}
-
-.Logo{
+.Logo-i{
     width: 610px;
     height: 120px;
     margin-top: 125px;
@@ -33,6 +10,7 @@ body{
     border: 2px solid black;
     border-radius: 5px;
 }
+
 .Fondo-i{
     background-position: center;
     background-repeat: no-repeat;
@@ -43,17 +21,8 @@ body{
     height: 500px;
     width: 500px;
     opacity: 0.2;
-    
+}
 
-}
-.svg-info{
-  color: black;
-  width: 2em;
-  height: 2em;
-}
-.Informacion-g{
-    margin-left: 10px;
-}
 .Contenedor-i{
     margin-top: 15px;
     display: flex;
@@ -64,49 +33,185 @@ body{
     padding: 10px;
 }
 
+.Novedades{
+    width: 250px;
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.Informacion-g{
+    margin-left: 10px;
+}
+
+.Informacion-g p{
+    margin-top: 10px;
+}
+
 .Perfil{
     width: 150px;
     height: 150px;
     border: 2px solid black;
     border-radius: 5px;
-
 }
 
-@media screen and (max-width:480px){
-    .Logo{
-        width: 305px;
-        height: 60px;   
-        border-radius: 5px;
+.ContenedorMasInfo{
+    display: flex;
+    align-items: center;
+}
 
-    }
-    .Novedades{
-        width: 305px;
-        height: 60px;   
-        border-radius: 5px;
+.info-button{
+   background-color: transparent;
+   height: 32px;
+   width: 32px;
+   cursor: pointer;
+   transition: all .5s ease;
 
-    }
-    .Contenedor-i{
-        flex-direction: column;
 
-    }
-    .Perfil{
-        width: 100px;
-        height: 100px;
-        border: 2px solid black;
-        border-radius: 5px;
+}
+.info-button:hover{
+    background-color: azure;
+}
 
-  
-    }
-    .Informacion-g{
-        margin-left: 1px;
-    }
+.svg-info{
+    color: black;
+    width: 2em;
+    height: 2em;
+    position: relative;
+    top: -10px;
+    right: 10px;
+}
+.svg-info:hover{
+    color: crimson;
+}
+
+.MasInfo{
+    display: none;
+    margin-top: 10px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+    
+}
+.MasInfo.isActive{
+    display: flex;
+    overflow: hidden;
+    opacity: 1;
+    height: 80vh;
+}
+.MasInfo-li button{
+    padding: 0%;
+    color: black;
+    width: 60px;
+    justify-items:left;
+    background-color: transparent;
+}
+.MasInfo-li{
+    color: black;
+}
+.MasInfo-li button:hover{
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 5); 
+}
+
+.MasinfoC{
+    display: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.MasinfoC.isActive{
+    display: flex;
+    flex-flow: column nowrap;
+
+    overflow: hidden;
+    opacity: 1;
+    height: 5vh;
+}
+
+.MasinfoP{
+    display: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+.MasinfoP.isActive{
+    display: flex;
+    overflow: hidden;
+    flex-flow: column nowrap;
+    opacity: 1;
+    height: 5vh;
+}
+
+.MasinfoM{
+    display: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+.MasinfoM.isActive{
+    display: flex;
+    overflow: hidden;
+    flex-flow: column nowrap;
+    opacity: 1;
+    height: 5vh;
+}
+
+.MasinfoA{
+    display: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+.MasinfoA.isActive{
+    display: flex;
+    overflow: hidden;
+    flex-flow: column nowrap;
+    opacity: 1;
+    height: 40vh;
+}
+
+@media screen and (max-width:940px){
     .Fondo-i{
         width: 250px;
         height: 250px;
         position: fixed;
         top: 40%;
-        right: 15%;
+        right: 30%;
     }
 
+    .Logo-i{
+        width: 90vh;
+        height: 15vh;   
+        border-radius: 5px;
+    }
+
+    .Contenedor-i{
+        flex-direction: column;
+    }
+
+    .Novedades{
+        width: 60vh;
+        height: 9vh;   
+        border-radius: 5px;
+    }
+  
+    .Perfil{
+        width: 30%;
+        height: 30%;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+    .Informacion-g{
+        margin-left: 1px;
+    }
 
 }

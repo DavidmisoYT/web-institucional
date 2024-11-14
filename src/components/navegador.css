@@ -6,6 +6,7 @@
     width: 100%;
     
 }
+
 .navegador{
     width: 100%;
     background-color: brown;
@@ -16,38 +17,41 @@
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
+
 .logo{
     height: 70px;
     width: 70px;
 }
+
 .svg{
     position: fixed;
-    top: 10px;
+    top: 35px;
     right: 10px; 
     width: 2em;
     height: 2em;
-    z-index: 10; 
-    
+    z-index: 10;
 }
+
 .navegador-button{
     display: none;
     cursor: pointer;
     height: 32px;
     width: 32px;
 }
+
 .navegador-nav{
     transition: all 0.5s ease;
-
 }
+
 .navegador-ul{
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
-
     padding-left: 0;
     margin: 0;
 }
+
 .navegador-li{
     margin: 0 .5em;
     width: auto;
@@ -55,17 +59,13 @@
     border: 2px solid #f9f9f9f9;
     border-radius: 5px;
     transition: all 0.3s ease;
-
 }
-
 .navegador-li:hover {
     background-color: #f1f1f1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 5);
-    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 5); 
 }
 
 .navegador-a{
-   
     font-size: 18px;
     color: white;
     text-decoration: none;
@@ -77,13 +77,9 @@
     border-radius: 5px;
     margin: 0 5px;
     transition: all 0.3s ease;
-
 }
-
 .navegador-a:hover {
     color: black; 
-    
-
 }
 
 
@@ -91,12 +87,14 @@
     .Contenedor{
         width: 100%;
     }
+
     .navegador-button{
         display: flex;
         position: absolute;
         top: 35px;
         right: 10px;
     }
+
     .navegador-nav{
         width: 100%;
         display: flex;
@@ -107,23 +105,23 @@
         opacity: 0;
         overflow: hidden;
         transition: all .5s ease;
-        
     }
     .navegador-nav.isActive{
         height: 65vh;
-        opacity: 1;
-        
+        opacity: 1; 
     }
+
     .navegador-ul{
         flex-direction: column;
         padding-left: 0;
-        
     }
+
     .navegador-li{
         margin: 0.5em 0;
         width: 150px;
         height: auto;
     }
+
     .navegador-a{
         font-size: 25px;
         border-radius: 5px;
@@ -133,7 +131,6 @@
         margin: 5px;
         font-size: 20px;
         padding: 10px;
-
     }
     
     

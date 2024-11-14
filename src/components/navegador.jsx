@@ -12,7 +12,6 @@ export const Navegador = () =>{
         setMenu(!menu)
     }
 
-
     return(
         <>
             <div className='Contenedor'>
