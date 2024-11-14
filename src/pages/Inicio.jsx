@@ -5,10 +5,7 @@ const nom= 'David Aguirre'
 const taller='Soluciones informaticas'
 const grupo = '10-3'
 export const Inicio = () =>{
-    const [info, setInfo ] = useState(false)
-    const toggleInfo = () =>{
-        setInfo(!info)
-    }
+  
     return(
         <>
             <div className='contenedori'>
@@ -24,10 +21,12 @@ export const Inicio = () =>{
                     <div className='Informacion-g'>
                             <img src={foto} alt="Foto del estudiante" className='Perfil'/>
                             <p>Nombre: {nom}<br/>Taller: {taller}<br/> Grupo: {grupo}</p>
-                           
-                            <div className={ `mas-info ${ info ? ' isActive' : ''}`}>
-
-                            </div>
+                            <button className='info-button'>
+                                <svg className='svg-info' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                                </svg>
+                            </button>
+                          
                     </div>
                 </div>
             </div>

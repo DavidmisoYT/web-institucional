@@ -10,14 +10,21 @@ body{
 
 }
 .info-button{
+   
+   background-color: transparent;
+   height: 320px;
+   width: 320px;
+
+}
+
+
+.info-button{
     display: flex;
     cursor: pointer;
     height: 32px;
     width: 32px;
 }
-.contenedor{
-    background-color: maroon;
-}
+
 .Logo{
     width: 610px;
     height: 120px;
@@ -38,6 +45,11 @@ body{
     opacity: 0.2;
     
 
+}
+.svg-info{
+  color: black;
+  width: 2em;
+  height: 2em;
 }
 .Informacion-g{
     margin-left: 10px;
