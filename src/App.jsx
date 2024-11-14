@@ -21,7 +21,7 @@ export const App = ()=>{
       <BrowserRouter>
         <Navegador/>
         <Routes>
-          <Route  path="/" element={<InicioSesion/>}/>
+          <Route  path="/web-institucional" element={<InicioSesion/>}/>
           <Route  path="/Inicio" element={<Inicio/>}/>
           <Route  path="/Horario" element={<Horario/>}/>
           <Route  path="/Docentes" element={<Docentes/>}/>
