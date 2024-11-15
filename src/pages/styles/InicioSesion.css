@@ -2,8 +2,6 @@
   width: 100%;
 }
 
-
-
 .inicio-sesion {
     position: relative;
     background-image: url('../../img/Fondo.jpeg');
@@ -21,7 +19,6 @@
    
 }
 
- 
 .form-container {
     background-color: rgba(240, 240, 240, 0.8); /* fondo semitransparente */
     padding: 20px;
@@ -30,6 +27,7 @@
     width: 300px;
     text-align: center;
 }
+
 .login-form {
   background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
   padding: 20px;
@@ -37,24 +35,26 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   max-width: 400px;
   width: 100%;
+  align-items: center;
+
   
 }
+
 .form-group {
   margin-bottom: 15px;
 }
-
 .form-group label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
-
 .form-group input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
+
 .titulo{
   width: 125px;
   background-color: brown;
@@ -84,24 +84,37 @@ button:hover {
 }
 
 
-@media screen and (max-width:480px){
+@media screen and (max-width:940px){
   .inicio-sesion {
     background-color: darkred;
     background-image: url('../../img/Fondo2.jpg');
     height: 100hv;
-  }
-  .login-form{
-    width: 100%;
-  }
-  .form-container{
-    width: 90%;
-  }
-  .form-group{
-    width: 100%;
+    align-items: center;
   }
 
   .titulo{
-    width: 100%;
+    position: relative;
+    top: auto;
+    right: -10%;    
+    width: 150px;
+
   }
+  
+  .login-form{
+    width: 100%;
+    align-items: center;
+
+  }
+  .form-container{
+    width: 90%;
+    align-items: center;
+
+  }
+  .form-group{
+    width: 100%;
+    align-items: center;
+
+  }
+
 
 }

@@ -30,7 +30,7 @@ export const Navegador = () =>{
                             <li className="navegador-li"><Link to="/Asistencia" className="navegador-a">Asistencia</Link></li>
                             <li className="navegador-li"><Link to="/Ajustes" className="navegador-a">Ajustes</Link></li>
                             <li className="navegador-li"><Link to="/Registro" className="navegador-a">Registro</Link></li>
-                            <li className="navegador-li"><Link to="/" className="navegador-a">Cerrar secion</Link></li>
+                            <li className="navegador-li"><Link to="/web-institucional" className="navegador-a">Cerrar secion</Link></li>
                         </ul>
                     </nav>
                 </header>
