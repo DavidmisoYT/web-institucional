@@ -17,9 +17,9 @@ body{
     background-size: cover;
     position: fixed;
     top: 30%;
-    right: 40%;
-    height: 500px;
-    width: 500px;
+    right: 30%;
+    height: 50vh;
+    width: 50vh;
     opacity: 0.2;
 }
 
@@ -31,6 +31,8 @@ body{
     gap: 10px; /* Espacio entre los elementos, opcional */
     float: left;
     padding: 10px;
+    font-size: 1.9vh;
+
 }
 
 .Novedades{
@@ -75,8 +77,8 @@ body{
 
 .svg-info{
     color: black;
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
     position: relative;
     top: -10px;
     right: 10px;
@@ -100,19 +102,17 @@ body{
     opacity: 1;
     height: 80vh;
 }
-.MasInfo-li button{
-    padding: 0%;
-    color: black;
-    width: 60px;
-    justify-items:left;
-    background-color: transparent;
-}
+
 .MasInfo-li{
     color: black;
+    font-size: 1.9vh;
+
 }
-.MasInfo-li button:hover{
-    background-color: #f1f1f1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 5); 
+
+.MasInfo-li-ev{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 1.9vh;
 }
 
 .MasinfoC{
@@ -180,8 +180,8 @@ body{
 
 @media screen and (max-width:940px){
     .Fondo-i{
-        width: 250px;
-        height: 250px;
+        width: 25vh;
+        height: 25vh;
         position: fixed;
         top: 40%;
         right: 30%;
