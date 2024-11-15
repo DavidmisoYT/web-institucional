@@ -13,7 +13,7 @@ export const App = () => {
     <>
     
       <BrowserRouter>
-        <Navegador />
+      <Navegador/>
         <Routes>
           <Route path="/web-institucional" element={<InicioSesion />} />
           <Route path="/web-institucional/Inicio" element={<PrivateRoute><Inicio /></PrivateRoute>} />

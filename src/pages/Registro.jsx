@@ -263,7 +263,7 @@ export const Registro = () => {
                   {error && <p className="error-message">{error}</p>}
                   {mensaje && <p className="success-message">{mensaje}</p>}
 
-                  <button type="submit">Registrar</button>
+                  <button type="submit" className='button-r'>Registrar</button>
                 </form>
             </div>
         </div>
