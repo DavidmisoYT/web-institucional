@@ -27,8 +27,8 @@ body{
     margin-top: 15px;
     display: flex;
     margin-left: 10px;
-    flex-direction: row; /* Alinea los elementos lateralmente (de izquierda a derecha) */
-    gap: 10px; /* Espacio entre los elementos, opcional */
+    flex-direction: row; 
+    gap: 10px; 
     float: left;
     padding: 10px;
     font-size: 1.9vh;

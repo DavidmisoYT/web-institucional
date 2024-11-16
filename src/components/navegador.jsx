@@ -5,27 +5,27 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export const Navegador = () => {
   const [menu, setMenu] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // Estado de autenticación
+  const [isAuthenticated, setIsAuthenticated] = useState(false); 
   const navigate = useNavigate();
 
-  // Verifica la autenticación al cargar el componente
+  
   useEffect(() => {
     const authToken = localStorage.getItem('authToken');
     if (authToken) {
-      setIsAuthenticated(true); // Si existe el token, el usuario está autenticado
+      setIsAuthenticated(true); 
     } else {
-      setIsAuthenticated(false); // Si no existe el token, el usuario no está autenticado
+      setIsAuthenticated(false); 
     }
-  }, []); // Se ejecuta solo una vez cuando el componente se monta
+  }, []);
 
   const toggleMenu = () => {
     setMenu(!menu);
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('authToken'); // Elimina el token de localStorage
-    setIsAuthenticated(false); // Actualiza el estado de autenticación
-    navigate('/web-institucional'); // Redirige a la página de inicio de sesión
+    localStorage.removeItem('authToken'); 
+    setIsAuthenticated(false); 
+    navigate('/web-institucional'); 
   };
 
   return (
@@ -48,9 +48,9 @@ export const Navegador = () => {
               <li className="navegador-li">
                 {isAuthenticated ? (
                     <p onClick={handleLogout} className="navegador-a">Cerrar sesión</p>
-                  // Muestra el botón de cerrar sesión si el usuario está autenticado
+                  
                 ) : (
-                  <Link to="/web-institucional" className="navegador-a">Iniciar sesión</Link> // Muestra el enlace para iniciar sesión si el usuario no está autenticado
+                  <Link to="/web-institucional" className="navegador-a">Iniciar sesión</Link> 
                 )}
               </li>
             </ul>
