@@ -126,11 +126,17 @@ export const Docentes = () => {
   }
 
   return (
+    <>
     <div className="docentes-page">
-      <div className="director-section">
-        <h2>Directores</h2>
-      </div>
+      <div className='nove-dose'>
+        <div>
+          <form>
+            <textarea className='Novedades' rows='31' cols='25' />
+          </form>
+        </div>
+        <p className='Grupo-d'> Grupo: {studentData.Grado} - {studentData.Grupo}</p>
 
+      </div>
       <div className="docentes-section">
         <h2>Docentes</h2>
         <div className="docentes-list">
@@ -139,21 +145,23 @@ export const Docentes = () => {
           ) : (
             docentes.map(docente => (
               <div key={docente.id} className="docente-card">
-                <img src={``} alt={`Foto de ${docente.name}`} />
-                <h3>{docente.name}</h3>
-                <p><strong>Materia:</strong> {docente.materia}</p>
-                <p><strong>Rol:</strong> {docente.rol}</p>
-                <p><strong>Teléfono:</strong> {docente.telefono}</p>
-                <p><strong>Correo:</strong> {docente.correo}</p>
+                <img src={``} alt={`Foto de ${docente.name}`} className='FotoDocente' />
+                <div className='info-dous'>
+                <h1>{docente.name}</h1>
+
+                <p>Materia: {docente.materia}</p>
+                <p>Teléfono: {docente.telefono}</p>
+                <p>Correo: {docente.correo}</p>
+                </div>
+
               </div>
             ))
           )}
         </div>
       </div>
 
-      <div className="novedades-section">
-        {/* Aquí puedes agregar más secciones si lo deseas */}
-      </div>
+    
     </div>
+    </>
   );
 };

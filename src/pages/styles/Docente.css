@@ -1,0 +1,92 @@
+
+.docentes-page {
+    padding: 5vh;
+    margin-top: -3vh;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+}
+
+.Grupo-d{
+    position: relative;
+    left: 3vh;
+    padding: 1vh;
+    border: 2px solid black;
+    width: 15vh;
+    height: 5vh;
+    text-align: center;
+    font-size: large;
+}
+
+.nove-dose{
+    padding: 2vh;
+    position: relative;
+    display: flex;
+}
+
+.docentes-section {
+    padding: 1vh;
+    border: 2px solid black;
+    margin: auto; /* Centra el contenido */
+    border-radius: 5px;
+    overflow: scroll;
+
+}
+
+
+.docentes-section h2{
+    position: relative;
+    right: -50vh;
+    border: 2px solid black;
+    max-width: 15%;
+    text-align: center;
+    margin-bottom: 0.5vh; 
+    font-size: large;
+    
+}
+
+.docentes-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a nuevas filas */
+    padding: 0.5vh;
+    max-height: 52vh;
+    max-width: 100vh;
+}
+
+.docente-card {
+    flex:  45%; /* Permite que cada tarjeta ocupe el 45% del ancho disponible */
+    padding: 0.5vh;
+    border: 2px solid black;
+    margin-bottom: 0.5vh;
+    box-sizing: border-box;
+    margin-left: 0.5vh;
+    font-size: 2vh;
+    max-height: 18vh;
+    border-radius: 5px;
+}
+.docente-card h1{
+    text-align: center;
+    font-size: x-large;
+    padding: 0.5vh;
+}
+.docente-card p{
+    margin-bottom: 0.5vh;
+}
+
+.info-dous{
+    max-width: 80%;
+    position: relative;
+    right: -15vh;
+    top: -13vh;
+    max-width: 30vh;
+}
+
+
+.FotoDocente{
+    width: 13vh;
+    height: 13vh;
+    border: 2px solid black;
+}
+
+
