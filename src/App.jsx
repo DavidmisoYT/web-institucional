@@ -7,7 +7,7 @@ import { Horario } from "./pages/Horario";
 import { Docentes } from "./pages/Docente";
 import { Asistencia } from "./pages/Asistencia";
 import { PrivateRoute } from "./services/PrivateRoute";
-
+import { PerfilDocente } from "./pages/PerfilDocentes";
 export const App = () => {
   return (
     <>
@@ -16,6 +16,7 @@ export const App = () => {
       <Navegador/>
         <Routes>
           <Route path="/web-institucional" element={<InicioSesion />} />
+          <Route path="/web-institucional/Perfil-docente" element={<PerfilDocente />} />
           <Route path="/web-institucional/Inicio" element={<PrivateRoute><Inicio /></PrivateRoute>} />
           <Route path="/web-institucional/Horario" element={<PrivateRoute><Horario /></PrivateRoute>} />
           <Route path="/web-institucional/Docentes" element={<PrivateRoute><Docentes /></PrivateRoute>} />

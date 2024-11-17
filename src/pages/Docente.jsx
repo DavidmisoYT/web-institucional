@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+/*import React, { useEffect, useState } from 'react';
 
 export const Docentes = () => {
   const [docentes, setDocentes] = useState([]);
@@ -9,7 +9,7 @@ export const Docentes = () => {
   useEffect(() => {
     const fetchStudentData = async () => {
       try {
-        const studentId = localStorage.getItem('userId'); // ID del estudiante desde localStorage
+        const studentId = localStorage.getItem('userId');
         const studentResponse = await fetch(`https://6736528eaafa2ef22230369a.mockapi.io/estudientes/${studentId}`);
         const student = await studentResponse.json();
         setStudentData(student);
@@ -17,7 +17,6 @@ export const Docentes = () => {
         const docentesResponse = await fetch('https://6736528eaafa2ef22230369a.mockapi.io/docentes');
         const allDocentes = await docentesResponse.json();
 
-        // Filtrar docentes por Grado y Grupo
         const filteredDocentes = allDocentes.filter(
           docente =>
             docente.Grado.includes(parseInt(student.Grado)) &&
@@ -47,7 +46,6 @@ export const Docentes = () => {
     <div className="docentes-page">
       <div className="director-section">
         <h2>Directores</h2>
-        <p>Aquí se mostrará la información de los directores académicos y técnicos.</p>
       </div>
 
       <div className="docentes-section">
@@ -55,7 +53,7 @@ export const Docentes = () => {
         <div className="docentes-list">
           {docentes.map(docente => (
             <div key={docente.id} className="docente-card">
-              <img src={`https://via.placeholder.com/150?text=${docente.name}`} alt={`Foto de ${docente.name}`} />
+              <img src={``} alt={`Foto de ${docente.name}`} />
               <h3>{docente.name}</h3>
               <p><strong>Materia:</strong> {docente.materia}</p>
               <p><strong>Rol:</strong> {docente.rol}</p>
@@ -67,8 +65,94 @@ export const Docentes = () => {
       </div>
 
       <div className="novedades-section">
-        <h2>Novedades</h2>
-        <p>Aquí se mostrarán las últimas noticias relacionadas con la página o el colegio.</p>
+        
+      </div>
+    </div>
+  );
+};
+*/
+import React, { useEffect, useState } from 'react';
+import './Styles/Docente.css'
+
+export const Docentes = () => {
+  const [docentes, setDocentes] = useState([]);
+  const [studentData, setStudentData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    const fetchStudentData = async () => {
+      try {
+        // Obtener el ID del estudiante desde localStorage
+        const studentId = localStorage.getItem('userId');
+        const studentResponse = await fetch(`https://6736528eaafa2ef22230369a.mockapi.io/estudientes/${studentId}`);
+        const student = await studentResponse.json();
+        setStudentData(student);
+
+        // Obtener los docentes desde la API
+        const docentesResponse = await fetch('https://6736528eaafa2ef22230369a.mockapi.io/docentes');
+        const allDocentes = await docentesResponse.json();
+
+        // Obtener el grado y grupo desde localStorage
+        const storedGrado = localStorage.getItem('grado');
+        const storedGrupo = localStorage.getItem('grupo');
+
+        // Filtrar docentes según el grado y grupo del estudiante
+        const filteredDocentes = allDocentes.filter(docente => {
+          // Revisamos si el docente tiene el grupo en el grado correcto
+          return (
+            docente.grupos[storedGrado] && 
+            docente.grupos[storedGrado].includes(parseInt(storedGrupo))
+          );
+        });
+
+        setDocentes(filteredDocentes);
+        setLoading(false);
+      } catch (error) {
+        setError('Error al cargar los datos: ' + error.message);
+        setLoading(false);
+      }
+    };
+
+    fetchStudentData();
+  }, []);
+
+  if (loading) {
+    return <p>Cargando datos...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  return (
+    <div className="docentes-page">
+      <div className="director-section">
+        <h2>Directores</h2>
+      </div>
+
+      <div className="docentes-section">
+        <h2>Docentes</h2>
+        <div className="docentes-list">
+          {docentes.length === 0 ? (
+            <p>No hay docentes disponibles para este grado y grupo.</p>
+          ) : (
+            docentes.map(docente => (
+              <div key={docente.id} className="docente-card">
+                <img src={``} alt={`Foto de ${docente.name}`} />
+                <h3>{docente.name}</h3>
+                <p><strong>Materia:</strong> {docente.materia}</p>
+                <p><strong>Rol:</strong> {docente.rol}</p>
+                <p><strong>Teléfono:</strong> {docente.telefono}</p>
+                <p><strong>Correo:</strong> {docente.correo}</p>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
+
+      <div className="novedades-section">
+        {/* Aquí puedes agregar más secciones si lo deseas */}
       </div>
     </div>
   );
