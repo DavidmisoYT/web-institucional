@@ -85,6 +85,7 @@ const DocenteForm = ({ onSubmit }) => {
           value={formData.materia}
           onChange={handleChange}
           required
+          placeholder="Materia"
         />
       </label>
 
@@ -96,6 +97,8 @@ const DocenteForm = ({ onSubmit }) => {
           value={formData.name}
           onChange={handleChange}
           required
+          placeholder="Materia"
+
         />
       </label>
 
@@ -115,6 +118,8 @@ const DocenteForm = ({ onSubmit }) => {
           value={formData.telefono}
           onChange={handleChange}
           required
+          placeholder="123 456 7890"
+
         />
       </label>
 
@@ -126,6 +131,8 @@ const DocenteForm = ({ onSubmit }) => {
           value={formData.correo}
           onChange={handleChange}
           required
+          placeholder="ejemplo@gmail.com"
+
         />
       </label>
 
@@ -137,13 +144,15 @@ const DocenteForm = ({ onSubmit }) => {
           value={formData.password}
           onChange={handleChange}
           required
+          placeholder="******"
+
         />
       </label>
 
       <div>
         <label>Grados:</label>
         {Array.from({ length: 6 }, (_, i) => 6 + i).map((grade) => (
-          <label key={grade} style={{ display: "block" }}>
+          <label key={grade} style={{ display: "flex" }}>
             <input
               type="checkbox"
               value={grade}
@@ -159,7 +168,7 @@ const DocenteForm = ({ onSubmit }) => {
         <div key={grade} style={{ marginTop: "1rem" }}>
           <h4>Grupos para Grado {grade}:</h4>
           {Array.from({ length: 8 }, (_, i) => i + 1).map((group) => (
-            <label key={group} style={{ display: "block" }}>
+            <label key={group} style={{ display: "flex" }}>
               <input
                 type="checkbox"
                 value={group}

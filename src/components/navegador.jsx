@@ -119,7 +119,7 @@ export const Navegador = () => {
                   <Link to='/web-institucional/Inicio' className="navegador-a">Perfil</Link>
                 </li>
               )}
-              {(userRole === 'docente' || userRole === 'director') && ( // Mostrar "Perfil" solo para docentes o directores
+              {(userRole === 'Docente' || userRole === 'Director') && ( // Mostrar "Perfil" solo para docentes o directores
                 <li className="navegador-li">
                   <Link to='/web-institucional/Perfil-docente' className="navegador-a">Perfil</Link>
                 </li>
