@@ -1,4 +1,3 @@
-import './Styles/general.css'
 
 export const Asistencia = () =>{
     return (

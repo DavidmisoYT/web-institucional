@@ -41,20 +41,19 @@
     border-radius: 4px;
 }
 .FormCreD select {
-    background-color: #ffffff; /* Fondo blanco */
-    border: 2.5px solid #ddd; /* Borde azul */
-    border-radius: 5px; /* Bordes redondeados */
-    color: #333; /* Texto legible */
-    padding: 10px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambia el cursor al pasar */
-    transition: all 0.3s ease; /* Animación al interactuar */
+    background-color: #ffffff; 
+    border: 2.5px solid #ddd; 
+    border-radius: 5px; 
+    color: #333;
+    padding: 10px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
     width: 100%;
 }
-
 .FormCreD select:hover{
-    background-color:darkred; /* Fondo azul */
-    color: #fff; /* Texto blanco */
+    background-color:darkred; 
+    color: #fff; 
 }
 
 .tituloCrD{
@@ -69,31 +68,31 @@
     text-align: center;
 }
 
-/* Estilo inicial para checkbox */
+
 .FormCreD  input[type="checkbox"] {
-    appearance: none; /* Elimina el estilo predeterminado */
+    appearance: none; 
     width: 20px;
     height: 20px;
-    border: 2px solid #ddd; /* Borde azul */
-    border-radius: 4px; /* Bordes redondeados */
-    background-color: #f9f9f9; /* Fondo claro */
-    cursor: pointer; /* Cursor de mano al pasar */
-    transition: all 0.3s ease; /* Animación al interactuar */
+    border: 2px solid #ddd; 
+    border-radius: 4px; 
+    background-color: #f9f9f9; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
     margin-right: 0.5vh;
     margin-bottom: 0.5vh;
   }
   
-  /* Estado marcado */
+  
   .FormCreD   input[type="checkbox"]:checked {
-    background-color: darkred; /* Fondo azul cuando está seleccionado */
-    border-color: #000000; /* Borde más oscuro */
+    background-color: darkred; 
+    border-color: #000000; 
     position: relative;
   }
   
-  /* Icono de check (simplemente decorativo) */
+ 
   .FormCreD  input[type="checkbox"]:checked::before {
-    content: "✔"; /* Agrega un símbolo de check */
-    color: white; /* Color del check */
+    content: "✔"; 
+    color: white; 
     font-size: 16px;
     display: flex;
     align-items: center;

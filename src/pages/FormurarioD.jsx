@@ -14,10 +14,9 @@ const DocenteForm = ({ onSubmit }) => {
     grupos: {},
   });
 
-  const [selectedGrades, setSelectedGrades] = useState([]); // Grados seleccionados
-  const [selectedGroups, setSelectedGroups] = useState({}); // Grupos seleccionados por grado
+  const [selectedGrades, setSelectedGrades] = useState([]); 
+  const [selectedGroups, setSelectedGroups] = useState({}); 
 
-  // Maneja los cambios en los inputs generales
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -26,7 +25,6 @@ const DocenteForm = ({ onSubmit }) => {
     });
   };
 
-  // Maneja la selección de grados
   const handleGradeSelection = (e) => {
     const grade = parseInt(e.target.value, 10);
     if (selectedGrades.includes(grade)) {
@@ -39,7 +37,6 @@ const DocenteForm = ({ onSubmit }) => {
     }
   };
 
-  // Maneja la selección de grupos para un grado específico
   const handleGroupSelection = (grade, group) => {
     const groupsForGrade = selectedGroups[grade] || [];
     if (groupsForGrade.includes(group)) {
@@ -55,7 +52,7 @@ const DocenteForm = ({ onSubmit }) => {
     }
   };
 
-  // Agrega los grupos seleccionados al objeto `grupos` del estado
+  
   const addGroupsToGrado = () => {
     setFormData({
       ...formData,
@@ -63,11 +60,11 @@ const DocenteForm = ({ onSubmit }) => {
     });
   };
 
-  // Maneja el envío del formulario
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     addGroupsToGrado();
-    onSubmit(formData); // Envía los datos al backend o al componente padre
+    onSubmit(formData); 
   };
 
   return (

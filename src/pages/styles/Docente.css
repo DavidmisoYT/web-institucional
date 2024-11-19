@@ -4,8 +4,8 @@
     margin-top: -3vh;
     align-items: center;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    justify-content: center; 
+    height: 100vh; 
 }
 
 .Grupo-d{
@@ -28,7 +28,7 @@
 .docentes-section {
     padding: 1vh;
     border: 2px solid black;
-    margin: auto; /* Centra el contenido */
+    margin: auto; 
     border-radius: 5px;
     overflow: scroll;
 
@@ -48,14 +48,14 @@
 
 .docentes-list {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a nuevas filas */
+    flex-wrap: wrap;
     padding: 0.5vh;
     max-height: 52vh;
     max-width: 100vh;
 }
 
 .docente-card {
-    flex:  45%; /* Permite que cada tarjeta ocupe el 45% del ancho disponible */
+    flex:  45%;
     padding: 0.5vh;
     border: 2px solid black;
     margin-bottom: 0.5vh;
@@ -111,7 +111,7 @@
     .docentes-section{
         padding: 1.5vh;
         border: 2px solid black;
-        margin: auto; /* Centra el contenido */
+        margin: auto; 
         border-radius: 5px;
         overflow: scroll;
         width: 90%;
@@ -126,7 +126,7 @@
     }
 
     .docente-card {
-        flex:  90%; /* Permite que cada tarjeta ocupe el 45% del ancho disponible */
+        flex:  90%; 
         padding: 0.5vh;
         border: 2px solid black;
         margin-bottom: 0.5vh;
@@ -141,13 +141,12 @@
     }
 
     .info-dous{
-        max-width: 100%; /* o cualquier ancho que desees */
+        max-width: 100%; 
 
     }
 
     .info-dous p{
-        max-width: 100%; /* o cualquier ancho que desees */
-
+        max-width: 100%; 
     }
 
 
