@@ -1,3 +1,7 @@
+::selection{
+    color: #f1f1f1;
+}
+
 .Contenedor{
     position: fixed;
     top: 0px;

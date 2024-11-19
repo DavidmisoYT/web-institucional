@@ -64,6 +64,8 @@
     font-size: 2vh;
     max-height: 18vh;
     border-radius: 5px;
+    display: flex;
+
 }
 .docente-card h1{
     text-align: center;
@@ -76,9 +78,7 @@
 
 .info-dous{
     max-width: 80%;
-    position: relative;
-    right: -15vh;
-    top: -13vh;
+    margin-left: 1.5vh;
     max-width: 30vh;
 }
 
@@ -87,6 +87,70 @@
     width: 13vh;
     height: 13vh;
     border: 2px solid black;
+}
+
+
+@media screen and (max-width:940px){
+    .docentes-page{
+        display: inline;
+        padding: auto;
+    }
+
+    .nove-dose{
+        margin-top: 15vh;
+        flex-direction: column;
+    }
+
+    .Grupo-d{
+        margin-top: 1vh;
+        position: relative;
+        left: 0vh;
+        width: 35%;
+    }
+
+    .docentes-section{
+        padding: 1.5vh;
+        border: 2px solid black;
+        margin: auto; /* Centra el contenido */
+        border-radius: 5px;
+        overflow: scroll;
+        width: 90%;
+    }
+
+    .docentes-section h2{
+        text-align: center;
+        position: relative;
+        left: 18vh;
+        max-width: 25%;
+        border-radius: 5px;
+    }
+
+    .docente-card {
+        flex:  90%; /* Permite que cada tarjeta ocupe el 45% del ancho disponible */
+        padding: 0.5vh;
+        border: 2px solid black;
+        margin-bottom: 0.5vh;
+        box-sizing: border-box;
+        margin-left: 0.5vh;
+        font-size: 2vh;
+        max-height: 19vh;
+        max-width: 100%;
+        border-radius: 5px;
+        overflow: scroll;
+        display: flex;
+    }
+
+    .info-dous{
+        max-width: 100%; /* o cualquier ancho que desees */
+
+    }
+
+    .info-dous p{
+        max-width: 100%; /* o cualquier ancho que desees */
+
+    }
+
+
 }
 
 

@@ -8,6 +8,8 @@ import { Docentes } from "./pages/Docente";
 import { Asistencia } from "./pages/Asistencia";
 import { PrivateRoute } from "./services/PrivateRoute";
 import { PerfilDocente } from "./pages/PerfilDocentes";
+import { EdiCreDocentes } from "./services/edicredocentes";
+EdiCreDocentes
 export const App = () => {
   return (
     <>
@@ -22,6 +24,7 @@ export const App = () => {
           <Route path="/web-institucional/Docentes" element={<PrivateRoute><Docentes /></PrivateRoute>} />
           <Route path="/web-institucional/Asistencia" element={<PrivateRoute><Asistencia /></PrivateRoute>} />
           <Route path="/web-institucional/Registro" element={<Registro />} />
+          <Route path="/web-institucional/CrearDocente" element={<EdiCreDocentes/>} />
         </Routes>
       </BrowserRouter>
     </>
