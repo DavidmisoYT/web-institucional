@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Styles/Docente.css";
 import { useNavigate } from "react-router-dom";
+import foto from '../img/FotoPerfil.png';  
+
 
 export const Docentes = () => {
   const [docentes, setDocentes] = useState([]);
@@ -93,7 +95,7 @@ export const Docentes = () => {
             docentes.map((docente) => (
               <div key={docente.id} className="docente-card">
                 <img
-                  src={``}
+                  src={foto}
                   alt={`Foto de ${docente.name}`}
                   className="FotoDocente"
                 />
