@@ -55,14 +55,24 @@ export const Navegador = () => {
                   <Link to='/web-institucional/Inicio' className="navegador-a">Perfil</Link>
                 </li>
               )}
-              {(userRole === 'Docente' || userRole === 'Director') && (
+              {(userRole === 'Docente' || userRole === 'director') && (
                 <li className="navegador-li">
                   <Link to='/web-institucional/Perfil-docente' className="navegador-a">Perfil</Link>
                 </li>
               )}
               <li className="navegador-li"><Link to="/web-institucional/Horario" className="navegador-a">Horario</Link></li>
               <li className="navegador-li"><Link to="/web-institucional/Docentes" className="navegador-a">Docente</Link></li>
-              <li className="navegador-li"><Link to="/web-institucional/Asistencia" className="navegador-a">Asistencia</Link></li>
+          
+              {userRole === 'estudiante' && ( 
+                <li className="navegador-li">
+                  <Link to='/web-institucional/Inicio' className="navegador-a">Perfil</Link>
+                </li>
+              )}
+              {(userRole === 'Docente' || userRole === 'director') && (
+                
+                     <li className="navegador-li"><Link to="/web-institucional/Asistencia" className="navegador-a">Estudiantes</Link></li>
+                
+              )}
               <li className="navegador-li"><Link to="/web-institucional/Registro" className="navegador-a">Registro</Link></li>
               <li className="navegador-li">
                 {isAuthenticated ? (
