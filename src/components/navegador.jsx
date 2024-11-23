@@ -55,7 +55,7 @@ export const Navegador = () => {
                   <Link to='/web-institucional/Inicio' className="navegador-a">Perfil</Link>
                 </li>
               )}
-              {(userRole === 'Docente' || userRole === 'director') && (
+              {(userRole === 'docente' || userRole === 'director') && (
                 <li className="navegador-li">
                   <Link to='/web-institucional/Perfil-docente' className="navegador-a">Perfil</Link>
                 </li>
@@ -65,10 +65,10 @@ export const Navegador = () => {
           
               {userRole === 'estudiante' && ( 
                 <li className="navegador-li">
-                  <Link to='/web-institucional/Inicio' className="navegador-a">Perfil</Link>
+                  <Link to='/web-institucional/inasistencias/:id' className="navegador-a">Asistencia</Link>
                 </li>
               )}
-              {(userRole === 'Docente' || userRole === 'director') && (
+              {(userRole === 'docente' || userRole === 'director') && (
                 
                      <li className="navegador-li"><Link to="/web-institucional/Asistencia" className="navegador-a">Estudiantes</Link></li>
                 
