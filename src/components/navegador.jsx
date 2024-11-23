@@ -61,8 +61,13 @@ export const Navegador = () => {
                 </li>
               )}
               <li className="navegador-li"><Link to="/web-institucional/Horario" className="navegador-a">Horario</Link></li>
-              <li className="navegador-li"><Link to="/web-institucional/Docentes" className="navegador-a">Docente</Link></li>
-          
+              {(userRole === 'estudiante' || userRole === 'director') && ( 
+                
+                   <li className="navegador-li"><Link to="/web-institucional/Docentes" className="navegador-a">Docente</Link></li>
+                
+              )}
+            
+
               {userRole === 'estudiante' && ( 
                 <li className="navegador-li">
                   <Link to='/web-institucional/inasistencias/:id' className="navegador-a">Asistencia</Link>
