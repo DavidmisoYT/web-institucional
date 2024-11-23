@@ -88,6 +88,12 @@
     height: 13vh;
     border: 2px solid black;
 }
+.create-docente-button{
+    max-width: 80%;
+    position: relative;
+    left: 25vh;
+    bottom: 3vh;
+}
 
 
 @media screen and (max-width:940px){
@@ -147,6 +153,14 @@
 
     .info-dous p{
         max-width: 100%; 
+    }
+
+    .create-docente-button{
+        max-width: 80%;
+        position: relative;
+        left: 10vh;
+        top: 2vh;
+        margin-bottom: 3.5vh;
     }
 
 

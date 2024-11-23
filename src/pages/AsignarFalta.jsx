@@ -57,8 +57,8 @@ export const AsignarFalta = () => {
       <h1>Asignar Inasistencia</h1>
       {estudiante ? (
         <form onSubmit={handleSubmit}>
-          <p><strong>Estudiante:</strong> {estudiante.name}</p>
-          <p><strong>Grupo:</strong> {estudiante.Grupo} - Grado: {estudiante.Grado}</p>
+          <p>Estudiante: {estudiante.name}</p>
+          <p>Grupo: {estudiante.Grupo} - Grado: {estudiante.Grado}</p>
 
           <label>
             Fecha de la falta:
@@ -157,12 +157,13 @@ export const AsignarFalta = () => {
 
   return (
     <div className="cont">
-      <h1>Asignar Inasistencia</h1>
+      
       {estudiante ? (
-        <form onSubmit={handleSubmit}>
-          <p><strong>Estudiante:</strong> {estudiante.name}</p>
-          <p><strong>Grupo:</strong> {estudiante.Grupo} - Grado: {estudiante.Grado}</p>
-          <p><strong>Materia:</strong> {materia}</p>
+        <form onSubmit={handleSubmit} className="FormIns">
+          <h1>Asignar Inasistencia</h1>
+          <p>Estudiante: {estudiante.name}</p>
+          <p>Grado: {estudiante.Grado} - {estudiante.Grupo}</p>
+          <p>Materia: {materia}</p>
 
           <label>
             Fecha de la falta:

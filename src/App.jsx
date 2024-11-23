@@ -25,10 +25,10 @@ export const App = () => {
           <Route path="/web-institucional/Horario" element={<PrivateRoute><Horario /></PrivateRoute>} />
           <Route path="/web-institucional/Docentes" element={<PrivateRoute><Docentes /></PrivateRoute>} />
           <Route path="/web-institucional/Asistencia" element={<PrivateRoute><Asistencia /></PrivateRoute>} />
-          <Route path="/web-institucional/inasistencias/:id" element={<Inasistencias />} />
-          <Route path="/web-institucional/asignar-falta/:id" element={<AsignarFalta />} />
+          <Route path="/web-institucional/inasistencias/:id" element={<PrivateRoute><Inasistencias /></PrivateRoute>} />
+          <Route path="/web-institucional/asignar-falta/:id" element={<PrivateRoute><AsignarFalta /></PrivateRoute>} />
           <Route path="/web-institucional/Registro" element={<Registro />} />
-          <Route path="/web-institucional/CrearDocente" element={<EdiCreDocentes/>} />
+          <Route path="/web-institucional/CrearDocente" element={<PrivateRoute><EdiCreDocentes/></PrivateRoute>} />
         </Routes>
       </BrowserRouter>
     </>

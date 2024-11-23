@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import './Styles/Asistencia.css';
+import foto from '../img/FotoPerfil.png';  
 
 export const Asistencia = () => {
   const [docente, setDocente] = useState(null);
@@ -62,44 +63,52 @@ export const Asistencia = () => {
   }, [userRol, docente, estudiantes]);
 
   return (
-    <div className="perfil-docente-container">
+    <div className="ContenedorInfoEs">
       {docente ? (
         <>
+          <div className="Infodous">
           <h2>Bienvenido, {docente.name}</h2>
           <p>Materia: {docente.materia}</p>
+          </div>
+          <h3 className="titleEs">Estudiantes Asignados</h3>
 
-          <h3>Estudiantes Asignados</h3>
+          <div className="EstudiantesSepcion">
           <div className="estudiantes-list">
             {estudiantesFiltrados.length > 0 ? (
               estudiantesFiltrados.map((estudiante) => (
                 <div key={estudiante.id} className="estudiante-card">
                   <img
-                    src={estudiante.foto || "https://via.placeholder.com/150"}
+                    src={foto}
                     alt={`Foto de ${estudiante.name || "Estudiante"}`}
-                    className="estudiante-foto"
+                    className="estudianteF"
                   />
-                  <h2>{estudiante.name || "No hay información disponible"}</h2>
-                  <p>Correo: {estudiante.correo || "No hay información disponible"}</p>
-                  <p>Grado: {estudiante.Grado || "No hay información disponible"} - {estudiante.Grupo || "No hay información disponible"}</p>
-                  <h3>Familiares</h3>
-                  <div>
-                    <p>
-                      <strong>Padre:</strong>{" "}
-                      {estudiante.familiares?.padre?.nombre || "No hay información disponible"}
-                    </p>
-                    <p>
-                      <strong>Madre:</strong>{" "}
-                      {estudiante.familiares?.madre?.nombre || "No hay información disponible"}
-                    </p>
-                    <p>
-                      <strong>Acudiente:</strong>{" "}
-                      {estudiante.familiares?.acudiente?.nombre || "No hay información disponible"}
-                    </p>
+                  <div className="InfoEstudet">
+                    <h2>{estudiante.name || "No hay información disponible"}</h2>
+                    <p>Correo: {estudiante.correo || "No hay información disponible"}</p>
+                    <p>Grado: {estudiante.Grado || "No hay información disponible"} - {estudiante.Grupo || "No hay información disponible"}</p>
                   </div>
-                  {/* Botón para asignar inasistencia */}
+                    
+                    <div>
+                    <h3>Familiares</h3>
+                      <p>
+                        <strong>Padre:</strong>{" "}
+                        {estudiante.familiares?.padre?.nombre || "No hay información disponible"}
+                      </p>
+                      <p>
+                        <strong>Madre:</strong>{" "}
+                        {estudiante.familiares?.madre?.nombre || "No hay información disponible"}
+                      </p>
+                      <p>
+                        <strong>Acudiente:</strong>{" "}
+                        {estudiante.familiares?.acudiente?.nombre || "No hay información disponible"}
+                      </p>
+                    </div>
+                  
+                  <div className="Boton">
                   <button onClick={() => navigate(`/web-institucional/asignar-falta/${estudiante.id}`, { state: { materia: docente.materia } })}>
                     Asignar Inasistencia
                   </button>
+                  </div>
 
                 </div>
               ))
@@ -107,9 +116,10 @@ export const Asistencia = () => {
               <p>No hay estudiantes asignados.</p>
             )}
           </div>
+          </div>
         </>
       ) : (
-        <p>Cargando información del docente...</p>
+        <p>Cargando información de los estudiantes...</p>
       )}
     </div>
   );

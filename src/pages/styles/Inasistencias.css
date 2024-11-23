@@ -1,3 +1,116 @@
-.cont-inasistencias{
-    margin-top: 50vh;
+/* Contenedor principal */
+.cont-inasistencias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: sans-serif;
+    color: #333;
+}
+
+/* Título principal */
+.cont-inasistencias h1 {
+    font-size: 2rem;
+    color: darkred;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Subtítulo */
+.cont-inasistencias h2 {
+    font-size: 1.5rem;
+    color: darkred;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Párrafos de información del estudiante */
+.cont-inasistencias p {
+    font-size: 1rem;
+    margin: 8px 0;
+    text-align: center;
+}
+
+/* Tabla de inasistencias */
+.inasistencias-tabla {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.inasistencias-tabla th,
+.inasistencias-tabla td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.inasistencias-tabla th {
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+}
+
+.inasistencias-tabla tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.inasistencias-tabla tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mensaje cuando no hay inasistencias */
+.cont-inasistencias p {
+    font-size: 1rem;
+    color: darkgrey;
+    text-align: center;
+}
+
+/* Botón Volver */
+.btn-volver {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.btn-volver:hover {
+    background-color: crimson;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .cont-inasistencias {
+        padding: 10px;
+    }
+
+    .inasistencias-tabla {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .cont-inasistencias h1 {
+        font-size: 1.5rem;
+    }
+
+    .cont-inasistencias h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn-volver {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
 }

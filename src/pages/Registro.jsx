@@ -76,6 +76,7 @@ export const Registro = () => {
     };
 
     return (
+        <>
         <div className="registro">
             <div className="formcontainer">
                 <form className="register-form" onSubmit={submit}>
@@ -171,5 +172,6 @@ export const Registro = () => {
                 </form>
             </div>
         </div>
+        </>
     );
 };

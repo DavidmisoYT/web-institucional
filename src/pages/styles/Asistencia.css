@@ -1,3 +1,119 @@
-.perfil-docente-container{
-    margin-top: 20vh;
+.ContenedorInfoEs{
+    padding: 5vh;
+    margin-top: 15vh;
+    height: 100vh; 
 }
+
+.Infodous{
+    margin-bottom: 1.5vh;
+    font-size: 2.5vh;
+}
+.titleEs{
+    margin-bottom: 1.5vh;
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+.estudiantes-list{
+    display: flex;
+    padding: 0.5vh;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 1.5vh;
+    
+}
+
+
+
+.estudiante-card{
+    flex:  45%;
+    padding: 0.5vh;
+    border: 2px solid black;
+    margin-bottom: 0.5vh;
+    box-sizing: border-box;
+    margin-left: 0.5vh;
+    font-size: 2vh;
+    max-width: 55%;
+    max-height: 25vh;
+    border-radius: 5px;
+    display: flex;
+    overflow: scroll;
+}
+.Boton{
+    display: inline-block;
+    width: 30%;
+    max-height: 30%;
+    position: relative;
+    right: 55vh;
+    top: 16vh;
+}
+
+.estudianteF{
+    width: 15vh;
+    height: 15vh;
+    border: 2px solid black;
+}
+
+.EstudiantesSepcion{
+    padding: 1vh;
+    border: 2px solid black;
+    margin: auto; 
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+.InfoEstudet{
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+.InfoEstudet h2{
+    font-size: 2.5vh;
+}
+
+@media screen and (max-width:940px){
+    .estudiante-card{
+        flex:  90%; 
+        padding: 0.5vh;
+        border: 2px solid black;
+        margin-bottom: 0.5vh;
+        box-sizing: border-box;
+        margin-left: 0.5vh;
+        font-size: 2vh;
+        max-height: 19vh;
+        max-width: 100%;
+        border-radius: 5px;
+        overflow: scroll;
+        display: flex;
+    }
+}
+
+@media screen and (max-width:650px){
+    .estudiante-card{
+        flex:  90%; 
+        padding: 0.5vh;
+        border: 2px solid black;
+        margin-bottom: 0.5vh;
+        box-sizing: border-box;
+        margin-left: 0.5vh;
+        font-size: 2vh;
+        max-height: 25vh;
+        max-width: 100%;
+        border-radius: 5px;
+        overflow: scroll;
+        display: inline-block;
+    }
+
+    .Boton{
+        display: inline-block;
+        width: 30%;
+        max-height: 30%;
+        position:static;
+        margin-top: 2vh;
+        max-width: 90%;
+        width: 80%;
+    }
+}
+
+
+
+
